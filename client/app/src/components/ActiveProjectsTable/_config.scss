@@ -1,0 +1,17 @@
+@import "../colors";
+@import "../mixins";
+
+$table-border-color: $alto;
+$table-text-color: $limed-spruce;
+$tr-background-color: $zircon;
+$tr-background-color-hover: $wild-sand;
+$tr-background-color-selected: $wild-sand;
+$font-family: "Open Sans", $commonSans;
+$project-status-td-width: 251px;
+$project-create-td-width: 262px;
+$project-name-td-width: calc(100% - #{$project-status-td-width} - #{$project-create-td-width});
+$scroll-chrome-width: 16px;
+$scroll-ff-width: 10px;
+$min-width-name: 600px;
+$min-width-status: 300px;
+$min-width-create: 300px;

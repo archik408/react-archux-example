@@ -1,0 +1,25 @@
+variables:
+  CI_BUILD_NAME: "react-archux-${CI_BUILD_REF}"
+
+production-dist:
+  only:
+    - develop
+  before_script:
+    - npm -v
+    - node -v
+    - npm install
+    - npm run lint
+    - npm run test
+  script:
+    - npm run build-client
+    - npm run jsdoc
+  artifacts:
+    name: "${CI_BUILD_NAME}"
+    expire_in: 1 week
+    paths:
+      - client/dist/
+      - client/README.md
+      - docs/
+      - server/
+      - package.json
+      - README.md

@@ -1,0 +1,4 @@
+**/*{.,-}min.js
+**/*.json
+**/*.scss
+./app/src/components/_common/**/*

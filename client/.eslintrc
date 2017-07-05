@@ -1,0 +1,39 @@
+{
+  "extends": "airbnb",
+  "parser": "babel-eslint",
+  "env": {
+    "mocha": true
+  },
+  "rules": {
+    "eqeqeq" : "off",
+    "comma-dangle": [
+      "error",
+      "never"
+    ],
+    "require-jsdoc": [
+      "error",
+      {
+        "require": {
+          "FunctionDeclaration": true,
+          "MethodDefinition": true,
+          "ClassDeclaration": true
+        }
+      }
+    ],
+    "valid-jsdoc": [
+      "error",
+      {
+        "requireReturnDescription": true,
+        "requireParamDescription": true,
+        "requireReturnType": true,
+        "prefer": {
+          "arg": "param",
+          "argument": "param",
+          "class": "constructor",
+          "return": "returns",
+          "virtual": "abstract"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,60 @@
+@import './colors';
+@import './globals';
+
+@mixin clearfix {
+  &::after {
+    clear: both;
+    content: '';
+    display: table;
+  }
+}
+
+/**
+ * Mixin to customize scrollbars
+ * @param {Length} $size - Horizontal scrollbar's height and vertical scrollbar's width
+ * @param {Color} $foreground-color - Scrollbar's color
+ * @param {Color} $background-color [mix($foreground-color, white, 50%)] - Scrollbar's color
+ * @example scss - Scrollbar styling
+ * @include scrollbars(.5em, slategray);
+ */
+@mixin scrollbars($size: 16px, $foreground-color: $periwinkle-gray, $background-color: $wild-sand) {
+  // For Google Chrome
+  ::-webkit-scrollbar {
+    width: $size;
+    height: $size;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background: $foreground-color;
+    border: 5px solid transparent;
+    background-clip: content-box;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: $background-color;
+  }
+  // For Internet Explorer
+  body {
+    scrollbar-face-color: $foreground-color;
+    scrollbar-track-color: $background-color;
+  }
+}
+
+@mixin center($xy:xy) {
+  @if $xy == xy {
+    bottom: auto;
+    left: 50%;
+    right: auto;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  } @else if $xy == x {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+  } @else if $xy == y {
+    bottom: auto;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

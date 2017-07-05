@@ -1,0 +1,136 @@
+@import './config';
+
+.button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  border: none;
+  text-transform: uppercase;
+  height: 50px;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-align: center;
+  cursor: pointer;
+  color: $btn-text-color;
+  padding: 0 10px;
+  width: 100%;
+  transition: background-color 0.3s ease-in-out;
+  margin-right: 1px;
+
+  i {
+    pointer-events: none;
+  }
+
+  &:focus {
+    border: none;
+  }
+
+  &.progressBtn {
+    &.warning {
+      &:hover {
+        background-color: $btn-primary-variant;
+      }
+    }
+  }
+
+  &.primary {
+    background-color: $btn-primary-variant;
+
+    &.progressBtn {
+      background-color: $btn-primary-variant !important;
+
+      &:hover {
+        background-color: $btn-primary-variant !important;
+      }
+    }
+
+    &:hover {
+      background-color: lighten($btn-primary-variant, 10%);
+    }
+  }
+
+  &.warning {
+    background-color: $btn-warning-variant;
+
+    &.progressBtn {
+      background-color: $btn-warning-variant !important;
+
+      &:hover {
+        background-color: $btn-warning-variant !important;
+      }
+    }
+
+    &:hover {
+      background-color: lighten($btn-warning-variant, 10%);
+    }
+  }
+
+  &.danger {
+    background-color: $btn-danger-variant;
+
+    &.progressBtn {
+      background-color: $btn-danger-variant !important;
+
+      &:hover {
+        background-color: $btn-danger-variant !important;
+      }
+    }
+
+    &:hover {
+      background-color: lighten($btn-danger-variant, 10%);
+    }
+  }
+
+  &.forbidden {
+    background-color: $btn-forbidden-variant;
+  }
+
+  &[disabled],
+  &[disabled]:hover {
+    background-color: $btn-forbidden-variant !important;
+    cursor: not-allowed;
+  }
+}
+
+.buttonGroup {
+  display: flex;
+  flex-direction: row;
+  border: none;
+}
+
+.content {
+  position: relative;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.progressInner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  transition: width 0.3s, opacity 0.3s;
+  animation: animate-progress 3s linear infinite;
+}
+
+.progress {
+  display: none;
+  pointer-events: none;
+
+  &.showProgress {
+    display: inline;
+  }
+}
+
+@keyframes animate-progress {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}

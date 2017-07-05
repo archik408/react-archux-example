@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Test Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+  </head>
+  <body>
+    <div id="app" style="height:100%;"></div>
+    <script type="application/javascript">
+      window.runDevLogger = true;
+
+      window.PUBLIC_URI = '/'; // instead you can use 'relative/path/to/assets' or '/assets/'
+      window.API_URI = '';     // instead you can use 'relative/path/to/api' or 'https://195.168.93.166'
+
+      var script = document.createElement( 'script' );
+      script.setAttribute( 'src', PUBLIC_URI + 'application.js');
+      document.body.appendChild(script);
+    </script>
+  </body>
+</html>

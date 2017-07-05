@@ -1,0 +1,5 @@
+@import '../colors';
+@import '../mixins';
+
+$header-height: 50px;
+$content-height: calc(100% - #{$header-height});

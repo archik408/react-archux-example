@@ -1,0 +1,52 @@
+// -- Open Sans
+$weights: 100 300 600;
+$pathToOpenSans: '../../assets/fonts/OpenSans';
+$prefixOpenSans: 'OpenSans';
+
+@each $weight in $weights {
+  @font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: $weight;
+    src: url('#{$pathToOpenSans}/#{$prefixOpenSans}-#{$weight}.eot?#iefix') format('embedded-opentype'),
+    url('#{$pathToOpenSans}/#{$prefixOpenSans}-#{$weight}.ttf')  format('truetype'),
+    url('#{$pathToOpenSans}/#{$prefixOpenSans}-#{$weight}.svg##{$pathToOpenSans}/#{$prefixOpenSans}-#{$weight}') format('svg');;
+  }
+
+  @font-face {
+    font-family: 'Open Sans';
+    font-style: italic;
+    font-weight: $weight;
+    src: url('#{$pathToOpenSans}/#{$prefixOpenSans}-#{$weight}italic.eot?#iefix') format('embedded-opentype'),
+    url('#{$pathToOpenSans}/#{$prefixOpenSans}-#{$weight}italic.ttf')  format('truetype'),
+    url('#{$pathToOpenSans}/#{$prefixOpenSans}-#{$weight}italic.svg##{$pathToOpenSans}/#{$prefixOpenSans}italic') format('svg');;
+  }
+}
+
+// -- Open Sans
+$pathToSourceSans: '../../assets/fonts/SourceSansPro';
+$prefixSourceSans: 'SourceSansPro';
+
+@each $weight in $weights {
+  @font-face {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: $weight;
+    src: url('#{$pathToSourceSans}/#{$prefixSourceSans}-#{$weight}.eot?#iefix') format('embedded-opentype'),
+    url('#{$pathToSourceSans}/#{$prefixSourceSans}-#{$weight}.ttf')  format('truetype'),
+    url('#{$pathToSourceSans}/#{$prefixSourceSans}-#{$weight}.svg##{$pathToSourceSans}/#{$prefixSourceSans}-#{$weight}') format('svg');;
+  }
+
+  @font-face {
+    font-family: 'Open Sans';
+    font-style: italic;
+    font-weight: $weight;
+    src: url('#{$pathToSourceSans}/#{$prefixSourceSans}-#{$weight}italic.eot?#iefix') format('embedded-opentype'),
+    url('#{$pathToSourceSans}/#{$prefixSourceSans}-#{$weight}italic.ttf')  format('truetype'),
+    url('#{$pathToSourceSans}/#{$prefixSourceSans}-#{$weight}italic.svg##{$pathToSourceSans}/#{$prefixSourceSans}italic') format('svg');;
+  }
+}
+
+body {
+  font-family: 'Open Sans', 'Roboto', sans-serif;
+}
