@@ -36,7 +36,7 @@ We using pure, classic and functional react components and split they on followi
 
 + `/components/_common` - *fundamental components* (like Buttons, Checkboxes, Selects);
 
-+ `/components` - *specific components* for domain and project (like DtaGrids, Sliders, Panels);
++ `/components` - *specific components* for domain and project (like DataGrids, Sliders, Panels);
 
 + `/containers` - *top components* which works with data and subscribed to store (Pages, Modals);
 
