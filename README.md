@@ -1,10 +1,10 @@
-##Test Project Example (React.js + Archux)
+## Test Project Example (React.js + Archux)
 
 >These are the depersonalized fragments from our real small project
 
 >It is just for acquaintance with our approach and unidirectional data flow organization with react.js and archux (our little flux-implementation)
 
-####Infrastructure
+#### Infrastructure
 
 + `actions` - contains entity action functions, specific for archux
 
@@ -30,7 +30,7 @@ export function performGetActiveProjects() {
 + `store` - archux implementation (similar to flux and redux)
 
 
-####Component Types
+#### Component Types
 
 We using pure, classic and functional react components and split they on following types:
 
@@ -40,7 +40,7 @@ We using pure, classic and functional react components and split they on followi
 
 + `/containers` - *top components* which works with data and subscribed to store (Pages, Modals);
 
-####Testing
+#### Testing
 
 We trying to test all aspects from components to services through reducers and actions:
 
@@ -48,11 +48,11 @@ We trying to test all aspects from components to services through reducers and a
 
 + `e2e` - end-to-end and functional tests (using protractor and page-object pattern)
 
-####Documentation
+#### Documentation
 
 We using beautiful tool for that - JSDoc
 
 
-###Screen
+### Screen
 
 ![screen img](./media/screen.png)
