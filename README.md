@@ -32,7 +32,7 @@ export function performGetActiveProjects() {
 
 #### Component Types
 
-We using pure, classic and functional react components and split they on following types:
+We are using pure, classic and functional react components and splitting they on following types:
 
 + `/components/_common` - *fundamental components* (like Buttons, Checkboxes, Selects);
 
@@ -42,7 +42,7 @@ We using pure, classic and functional react components and split they on followi
 
 #### Testing
 
-We trying to test all aspects from components to services through reducers and actions:
+We are trying to test all aspects from components to services through reducers and actions:
 
 + `__tests__` - unit tests (using enzyme)
 
@@ -50,7 +50,7 @@ We trying to test all aspects from components to services through reducers and a
 
 #### Documentation
 
-We using beautiful tool for that - JSDoc
+We are using beautiful tool for that - JSDoc
 
 
 ### Screen
