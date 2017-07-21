@@ -4,6 +4,59 @@
 
 >It is just for acquaintance with our approach and unidirectional data flow organization with react.js and archux (our little flux-implementation)
 
+We believe that for medium and small projects with little interactivity there is no need for *flux*, *mobx* or *redux* with *thunk* or *sagas*
+
+It is enough to realize its simple [storage (observer)](https://github.com/archik408/react-archux-example/blob/master/client/app/src/store/Store.js) and [dispatcher](https://github.com/archik408/react-archux-example/blob/master/client/app/src/store/Dispatcher.js), which will work strictly in the [unidirectional dataflow](https://en.wikipedia.org/wiki/Dataflow_programming) style (without callbacks in thenable and middlewares)
+
+Bad (Non Unidirectional Dataflow):
+```javascript
+  /**
+   * Fetch active projects
+   *
+   * @returns {void}
+   */
+  componentDidMount() {
+    // handle properly in reducer  
+    actions.performGetActiveProjects()
+      .then((response) => {
+        // do something with response here
+      })
+      .catch((err) => {
+        // handle error
+      });
+  }
+```
+
+Good (Unidirectional Dataflow):
+```javascript
+  /**
+   * Fetch active projects
+   *
+   * @returns {void}
+   */
+  componentDidMount() {
+    // handle properly in reducer  
+    actions.performGetActiveProjects();
+  }
+  
+  /**
+   * Check next container properties
+   * 
+   * @param {Object} nextProps - New properties
+   * @param {Object} nextCtx - New context
+   * 
+   * @returns {void}
+   */
+  componentWillReceiveProps(nextProps, nextCtx) {
+    const { activeProjects } = nextProps;
+    // do something with response here  
+  }
+```
+
+#### Diagram
+
+![screen img](./media/dgrm.png)
+    
 #### Infrastructure
 
 + `actions` - contains entity action functions, specific for archux
