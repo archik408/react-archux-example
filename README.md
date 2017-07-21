@@ -1,5 +1,7 @@
 ## Test Project Example (React.js + Archux)
 
+[![npm version](https://img.shields.io/npm/v/react-archux-example.svg?style=flat-square)](https://npmjs.com/package/react-archux-example)
+
 >These are the depersonalized fragments from our real small project
 
 >It is just for acquaintance with our approach and unidirectional data flow organization with react.js and archux (our little flux-implementation)
@@ -55,7 +57,7 @@ Good (Unidirectional Dataflow):
 
 #### Diagram
 
-![screen img](./media/dgrm.png)
+![screen img](https://raw.githubusercontent.com/archik408/react-archux-example/master/media/dgrm.png)
     
 #### Infrastructure
 
@@ -108,4 +110,4 @@ We are using beautiful tool for that - JSDoc
 
 ### Screen
 
-![screen img](./media/screen.png)
+![screen img](https://raw.githubusercontent.com/archik408/react-archux-example/master/media/screen.png)

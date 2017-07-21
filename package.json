@@ -1,7 +1,7 @@
 {
   "name": "react-archux-example",
   "description": "React + Archux Example",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "server/server.js",
   "scripts": {
     "build-client": "NODE_ENV=production webpack --config client/webpack.config.js -p --progress",
@@ -21,6 +21,29 @@
     "node": ">=6.9.1",
     "npm": ">=3.10.8"
   },
+  "author" : "artur.basak@instinctools.ru",
+  "repository" : {
+    "type": "git",
+    "url": "https://github.com/archik408/react-archux-example.git"
+  },
+  "license" : "MIT",
+  "homepage": "https://github.com/archik408/react-archux-example",
+  "keywords": [
+    "react",
+    "unidirectional dataflow",
+    "redux",
+    "flux",
+    "action-dispatcher",
+    "dispatcher",
+    "store",
+    "observer",
+    "react example",
+    "custom flux",
+    "app example",
+    "client-side example",
+    "archux"
+  ],
+
   "dependencies": {
     "axios": "0.14.0",
     "compression": "1.6.2",
