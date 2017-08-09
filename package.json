@@ -1,7 +1,7 @@
 {
   "name": "react-archux-example",
   "description": "React + Archux Example",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "main": "server/server.js",
   "scripts": {
     "build-client": "NODE_ENV=production webpack --config client/webpack.config.js -p --progress",
