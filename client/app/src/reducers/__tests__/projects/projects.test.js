@@ -49,28 +49,28 @@ import {
   GET_PROJECT_DATA_BY_PROJECT_ID_FAIL
 } from './data.test';
 
-describe('Projects reducer', () => {
-  // ********************* GET_ACTIVE_PROJECTS ******************************
-  it('should handle GET_ACTIVE_PROJECTS_PENDING', () => {
-    const result = projectsReducer(INIT_STATE, GET_ACTIVE_PROJECTS_PENDING);
-    expect(result.activeProjects.loading).to.be.equal(true);
-    expect(result.activeProjects.error).to.be.equal(null);
-    expect(result.activeProjects.data).to.have.length(0);
-  });
-  it('should handle GET_ACTIVE_PROJECTS_SUCCESS', () => {
-    const result = projectsReducer(INIT_STATE, GET_ACTIVE_PROJECTS_SUCCESS);
-    expect(result.activeProjects.data).to.have.length(1);
-    expect(result.activeProjects.data).to.deep.equal(GET_ACTIVE_PROJECTS_SUCCESS.payload);
+  describe('Projects reducer', () => {
+    // ********************* GET_ACTIVE_PROJECTS ******************************
+    it('should handle GET_ACTIVE_PROJECTS_PENDING', () => {
+      const result = projectsReducer(INIT_STATE, GET_ACTIVE_PROJECTS_PENDING);
+      expect(result.activeProjects.loading).to.be.equal(true);
+      expect(result.activeProjects.error).to.be.equal(null);
+      expect(result.activeProjects.data).to.have.length(0);
+    });
+    it('should handle GET_ACTIVE_PROJECTS_SUCCESS', () => {
+      const result = projectsReducer(INIT_STATE, GET_ACTIVE_PROJECTS_SUCCESS);
+      expect(result.activeProjects.data).to.have.length(1);
+      expect(result.activeProjects.data).to.deep.equal(GET_ACTIVE_PROJECTS_SUCCESS.payload);
 
-    expect(result.activeProjects.loading).to.be.equal(false);
-    expect(result.activeProjects.error).to.be.equal(null);
-  });
-  it('should handle GET_ACTIVE_PROJECTS_FAIL', () => {
-    const result = projectsReducer(INIT_STATE, GET_ACTIVE_PROJECTS_FAIL);
-    expect(result.activeProjects.loading).to.be.equal(false);
-    expect(result.activeProjects.error).to.equal('Error');
-    expect(result.activeProjects.data).to.have.length(0);
-  });
+      expect(result.activeProjects.loading).to.be.equal(false);
+      expect(result.activeProjects.error).to.be.equal(null);
+    });
+    it('should handle GET_ACTIVE_PROJECTS_FAIL', () => {
+      const result = projectsReducer(INIT_STATE, GET_ACTIVE_PROJECTS_FAIL);
+      expect(result.activeProjects.loading).to.be.equal(false);
+      expect(result.activeProjects.error).to.equal('Error');
+      expect(result.activeProjects.data).to.have.length(0);
+    });
 
   // ********************* SEARCH_PROJECTS ******************************
   it('should handle SEARCH_PROJECTS_PENDING', () => {

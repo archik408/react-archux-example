@@ -18,20 +18,20 @@ export function getActiveProjects() {
         id: '1',
         name: 'Project 1',
         type: {
-          name: 'Pulse',
+          name: 'Pulse'
         },
         status: {
-          name: 'Final',
+          name: 'Final'
         }
       },
       {
         id: '2',
         name: 'Project 2',
         type: {
-          name: 'Standard',
+          name: 'Standard'
         },
         status: {
-          name: 'Selection',
+          name: 'Selection'
         }
       }
     ]
