@@ -45,7 +45,7 @@
   ],
 
   "dependencies": {
-    "axios": "0.14.0",
+    "axios": "0.21.1",
     "compression": "1.6.2",
     "cors": "2.8.1",
     "exceljs": "0.4.1",
